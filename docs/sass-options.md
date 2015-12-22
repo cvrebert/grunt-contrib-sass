@@ -32,14 +32,6 @@ Default: `false` on Windows, otherwise `true`
 Force Unix newlines in written files.
 
 
-## check
-
-Type: `Boolean`  
-Default: `false`
-
-Just check the Sass syntax, does not evaluate and write the output.
-
-
 ## style
 
 Type: `String`  

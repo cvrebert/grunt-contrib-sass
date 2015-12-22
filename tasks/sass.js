@@ -5,7 +5,6 @@ var dargs = require('dargs');
 var async = require('async');
 var spawn = require('cross-spawn');
 var which = require('which');
-var checkFilesSyntax = require('./lib/check');
 var concurrencyCount = (os.cpus().length || 1) * 4;
 
 module.exports = function (grunt) {
@@ -32,12 +31,6 @@ module.exports = function (grunt) {
       checkBinary('sass',
         'You need to have Ruby and Sass installed and in your PATH for this task to work.'
       );
-    }
-
-    if (options.check) {
-      options.concurrencyCount = concurrencyCount;
-      checkFilesSyntax(this.filesSrc, options, cb);
-      return;
     }
 
     var passedArgs = dargs(options, {
