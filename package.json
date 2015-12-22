@@ -3,9 +3,23 @@
   "description": "Compile Sass to CSS",
   "version": "0.9.2",
   "author": {
-    "name": "Grunt Team",
-    "url": "http://gruntjs.com/"
+    "name": "Bootstrap Team",
+    "url": "http://getbootstrap.com"
   },
+  "contributors": [
+    {
+      "name": "Grunt Team",
+      "url": "http://gruntjs.com/"
+    },
+    {
+      "name": "Sindre Sorhus",
+      "url": "https://github.com/sindresorhus"
+    },
+    {
+      "name": "Radko Dinev",
+      "url":"https://github.com/radkodinev"
+    }
+  ],
   "repository": "gruntjs/grunt-contrib-sass",
   "license": "MIT",
   "engines": {
