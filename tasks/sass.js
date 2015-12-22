@@ -15,7 +15,7 @@ module.exports = function (grunt) {
     } catch (err) {
       return grunt.warn(
         '\n' + errMsg + '\n' +
-        'More info: https://github.com/gruntjs/grunt-contrib-sass\n'
+        'More info: https://github.com/cvrebert/grunt-contrib-sass\n'
       );
     }
   };

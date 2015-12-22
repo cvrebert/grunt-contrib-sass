@@ -1,24 +1,8 @@
-# grunt-contrib-sass v0.9.2 [![Build Status: Linux](https://travis-ci.org/gruntjs/grunt-contrib-sass.svg?branch=master)](https://travis-ci.org/gruntjs/grunt-contrib-sass)
+# grunt-contrib-sass
+
+[![Build Status: Linux](https://travis-ci.org/cvrebert/grunt-contrib-sass.svg?branch=master)](https://travis-ci.org/cvrebert/grunt-contrib-sass)
 
 > Compile Sass to CSS
-
-
-
-## Getting Started
-This plugin requires Grunt `>=0.4.0`
-
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
-
-```shell
-npm install grunt-contrib-sass --save-dev
-```
-
-Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
-
-```js
-grunt.loadNpmTasks('grunt-contrib-sass');
-```
-
 
 
 
@@ -221,26 +205,6 @@ grunt.initConfig({
         'main.css': 'main.scss',
         'widgets.css': 'widgets.scss'
       }
-    }
-  }
-});
-```
-
-#### Compile files in a directory
-
-Instead of naming all files you want to compile, you can use the `expand` property allowing you to specify a directory. More information available in the [grunt docs](http://gruntjs.com/configuring-tasks) - `Building the files object dynamically`.
-
-```js
-grunt.initConfig({
-  sass: {
-    dist: {
-      files: [{
-        expand: true,
-        cwd: 'styles',
-        src: ['*.scss'],
-        dest: '../public',
-        ext: '.css'
-      }]
     }
   }
 });

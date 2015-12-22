@@ -20,7 +20,10 @@
       "url":"https://github.com/radkodinev"
     }
   ],
-  "repository": "gruntjs/grunt-contrib-sass",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cvrebert/grunt-contrib-sass.git"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=0.10.0"
