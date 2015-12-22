@@ -48,11 +48,12 @@
     "grunt": ">=0.4.0"
   },
   "keywords": [
-    "gruntplugin",
+    "ruby",
     "scss",
     "sass",
     "css",
     "compile",
+    "compiler",
     "preprocessor",
     "style"
   ],
