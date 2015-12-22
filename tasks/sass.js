@@ -3,7 +3,6 @@ var path = require('path');
 var os = require('os');
 var dargs = require('dargs');
 var async = require('async');
-var chalk = require('chalk');
 var spawn = require('cross-spawn');
 var which = require('which');
 var checkFilesSyntax = require('./lib/check');
@@ -101,7 +100,7 @@ module.exports = function (grunt) {
           return;
         }
 
-        grunt.verbose.writeln('File ' + chalk.cyan(file.dest) + ' created');
+        grunt.verbose.writeln('File ' + file.dest + ' created');
         next();
       });
     }, cb);
