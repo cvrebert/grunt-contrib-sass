@@ -20,9 +20,13 @@
       "url":"https://github.com/radkodinev"
     }
   ],
+  "homepage": "https://github.com/cvrebert/grunt-contrib-sass",
   "repository": {
     "type": "git",
     "url": "https://github.com/cvrebert/grunt-contrib-sass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cvrebert/grunt-contrib-sass/issues"
   },
   "license": "MIT",
   "engines": {
