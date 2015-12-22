@@ -1,6 +1,6 @@
 {
   "name": "grunt-contrib-sass",
-  "description": "Compile Sass to CSS",
+  "description": "Compile Sass to CSS using Ruby Sass",
   "version": "1.0.0",
   "author": {
     "name": "Bootstrap Team",
