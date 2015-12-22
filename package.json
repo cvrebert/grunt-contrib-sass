@@ -33,8 +33,9 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "unit": "nodeunit test/test.js",
-    "test": "grunt test"
+    "nodeunit": "nodeunit test/test.js",
+    "clean": "rimraf test/tmp .sass-cache",
+    "test": "npm run clean && grunt test && npm run nodeunit && npm run clean"
   },
   "dependencies": {
     "async": "^0.9.0",
@@ -45,8 +46,8 @@
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
-    "grunt-contrib-clean": "^0.6.0",
-    "nodeunit": "^0.9.1"
+    "nodeunit": "^0.9.1",
+    "rimraf": "^2.4.5"
   },
   "peerDependencies": {
     "grunt": ">=0.4.0"
