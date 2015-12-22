@@ -2,7 +2,6 @@
 var path = require('path');
 var dargs = require('dargs');
 var async = require('async');
-var chalk = require('chalk');
 var spawn = require('cross-spawn');
 var grunt = require('grunt');
 
@@ -34,15 +33,15 @@ module.exports = function (files, options, cb) {
 
     grunt.verbose.writeln('Command: ' + bin + ' ' + args.join(' '));
 
-    grunt.verbose.writeln('Checking file ' + chalk.cyan(src) + ' syntax.');
+    grunt.verbose.writeln('Checking file ' + src + ' syntax.');
     spawn(bin, args, {stdio: 'inherit'})
       .on('error', grunt.warn)
       .on('close', function (code) {
         if (code > 0) {
           failCount++;
-          grunt.log.error('Checking file ' + chalk.cyan(src) + ' - ' + chalk.red('failed') + '.');
+          grunt.log.error('Checking file ' + src + ' - ' + 'failed' + '.');
         } else {
-          grunt.verbose.ok('Checking file ' + chalk.cyan(src) + ' - ' + chalk.green('passed') + '.');
+          grunt.verbose.ok('Checking file ' + src + ' - ' + 'passed' + '.');
         }
 
         next();
@@ -51,7 +50,7 @@ module.exports = function (files, options, cb) {
     if (failCount > 0) {
       grunt.warn('Sass check failed for ' + failCount + ' files.');
     } else {
-      grunt.log.ok('All ' + chalk.cyan(filesToCheck.length) + ' files passed.');
+      grunt.log.ok('All ' + filesToCheck.length + ' files passed.');
     }
 
     cb();
