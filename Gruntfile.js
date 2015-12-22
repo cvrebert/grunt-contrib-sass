@@ -7,9 +7,6 @@ module.exports = function (grunt) {
         '.sass-cache'
       ]
     },
-    nodeunit: {
-      tests: ['test/test.js']
-    },
     sass: {
       options: {
         sourcemap: 'none'
@@ -49,8 +46,27 @@ module.exports = function (grunt) {
 
   grunt.loadTasks('tasks');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
+  grunt.registerTask('nodeunit', function () {
+    var done = this.async();
+    var spawn = require('child_process').spawn;
+    spawn('npm', ['run', 'unit'], {stdio: 'inherit'})
+    .on('error', function (err) {
+      grunt.fail.warn(err);
+    })
+    .on('exit', function (code, signal) {
+      if (code === 0) {
+        grunt.log.writeln('nodeunit passed.');
+        done();
+      }
+      else if (code === null) {
+        grunt.fail.warn('nodeunit killed with signal ' + signal);
+      }
+      else {
+        grunt.fail.warn('nodeunit exited with code ' + code);
+      }
+    });
+  });
   grunt.registerTask('mkdir', grunt.file.mkdir);
   grunt.registerTask('test', [
     'clean',
