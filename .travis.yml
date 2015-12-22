@@ -6,5 +6,13 @@ node_js:
 before_install:
   - rvm install 2.2
   - rvm use 2.2 --fuzzy
-  - gem update --system
-  - gem install sass
+  - "if [ $SASS = gem ]; then gem update --system; gem install sass; fi"
+  - "if [ $SASS = bundler ]; then bundler install; fi"
+env:
+  - SASS=none
+  - SASS=gem
+  - SASS=bundler
+matrix:
+  fast_finish: true
+  allow_failures:
+    - env: SASS=none
