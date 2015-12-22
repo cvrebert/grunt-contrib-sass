@@ -17,7 +17,7 @@
     },
     {
       "name": "Radko Dinev",
-      "url":"https://github.com/radkodinev"
+      "url": "https://github.com/radkodinev"
     }
   ],
   "homepage": "https://github.com/cvrebert/grunt-contrib-sass",
@@ -33,6 +33,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
+    "unit": "nodeunit test/test.js",
     "test": "grunt test"
   },
   "dependencies": {
@@ -45,7 +46,7 @@
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
     "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-nodeunit": "^0.4.1"
+    "nodeunit": "^0.9.1"
   },
   "peerDependencies": {
     "grunt": ">=0.4.0"
